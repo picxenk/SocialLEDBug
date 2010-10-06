@@ -1,9 +1,8 @@
 /* -----------------------------------------------------------------------
- * Title:    flick led
- * Author:   Alexander Weber <alexander.weber.0 at gmail.com>
- * Date:     21.02.2007
+ * Title:    Social LED Bug
+ * Author:  PINY
+ * Inspired by:   Alexander Weber <alexander.weber.0 at gmail.com>
  * Hardware: ATtiny13v
- * Software: WinAVR 20060421
  */
 
 // define as -D switch

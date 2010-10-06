@@ -76,7 +76,7 @@ int main(void) {
 	uint8_t last_light = OFF;
 	uint16_t last_time = 0;
 	uint8_t programming = TRUE;
-    uint16_t threshold = 0; 
+    uint16_t threshold = 0;
 	
 	// define LED and ADC enable as outputs
 	DDRB |= (1 << LED_BIT) |

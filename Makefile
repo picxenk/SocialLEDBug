@@ -16,7 +16,7 @@
 
 DEVICE     = attiny13
 CLOCK      = 1200000
-PROGRAMMER = -c stk500v2 -P '/dev/cu.usbserial-00002006'
+PROGRAMMER = -c stk500v2 -P '/dev/cu.usbserial-00001004'
 OBJECTS    = main.o
 FUSES      = -i 5 -U hfuse:w:0xFF:m -U lfuse:w:0x6A:m
 AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE)

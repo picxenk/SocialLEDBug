@@ -64,7 +64,15 @@ uint16_t get_adc(uint8_t channel) {
 	return ADCW;
 }
 
+void turnOnLED(uint8_t delay_time) {
+	PORTB |= (1 << LED_BIT);	
+	_delay_ms(delay_time);
+}
 
+void turnOffLED(uint8_t delay_time) {
+	PORTB &= ~(1 << LED_BIT);
+	_delay_ms(delay_time);
+}
 
 int main(void) {
 	
@@ -97,10 +105,13 @@ int main(void) {
 	// intro
 	debug = (get_adc(CHANNEL) < threshold) ? 3 : 6;
 	for (i = 0; i < debug; i++) {
-		PORTB |= (1 << LED_BIT);	
-		_delay_ms(200);
+		//PORTB |= (1 << LED_BIT);	
+		//_delay_ms(200);
+        turnOnLED(200);
+
 		PORTB &= ~(1 << LED_BIT);
 		_delay_ms(200);
+        //turnOffLED(200);
 	}
 	for (i = 0; i < 5; i++) {
 		_delay_ms(100);
@@ -115,6 +126,8 @@ int main(void) {
 				_delay_ms(40);
 				PORTB &= ~(1 << LED_BIT);
 				_delay_ms(40);
+        //        turnOnLED(40);
+         //       turnOffLED(40);
 			}
 			// now read the ldr and store it
 			for (i = 0; i < MAX; i++) {
